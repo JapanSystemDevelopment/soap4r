@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'ftools'
+
 if RUBY_VERSION.to_f <= 1.8
   gem 'htmlentities', '4.3.1'       # Require this if OxParser's built-in "Special Character" conversion isn't sufficient for your needs.
   gem 'nokogiri', '~> 1.5.11'       # nokogiriparser ; Uses libxml2, libxslt, and zlib
