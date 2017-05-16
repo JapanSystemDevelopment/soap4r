@@ -412,7 +412,7 @@ private
 
   def addextend2soap(node, obj)
     return if [Symbol, Fixnum, Bignum, Float].any?{ |c| obj.is_a?(c) }
-    list = (class << obj; self; end).ancestors - obj.class.ancestors
+    list = (class << obj.class; self; end).ancestors - obj.class.ancestors
     list = list.reject{|c| c.class == Class } ## As of Ruby 2.1 Singleton Classes are now included in the ancestry. Need to filter those out here.
 
     return if list.empty?
