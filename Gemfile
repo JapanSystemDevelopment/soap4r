@@ -44,6 +44,8 @@ group :test do
   # gem 'ruby-termios'               # Unroller requires this . . .
   # gem 'unroller', :git=>'https://github.com/jayjlawrence/unroller.git', :branch=>'master'
 
-  gem 'byebug' if RUBY_VERSION.to_f >= 2.0
+  gem 'debase', '0.2.1', require: false
+  gem 'ruby-debug-ide', '0.6.1.beta2', require: false
+
   gem 'soap4r-ng', :path=>'.'  # Make our development copy (this directory) available as a Gem via Bundler. Useful for running tests.
 end
